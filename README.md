@@ -1,3 +1,3 @@
-<h1>JAM</h1>
+<h1>Jam</h1>
 
-Saving you time.
+Saving you time. Coming soon!
