@@ -49,8 +49,13 @@ function getCurrentTabUrl(callback) {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url) => {
     //For now we assume it's a LinkedIn page
-    var jobId = url.match(/[0-9]+/g)[0];
-    document.getElementById("jobtitle").value = jobId;
+    if(url.match(/www\.linkedin\.com)/g)!=null){
+      var jobId = url.match(/[0-9]+/g)[0];
+      document.getElementById("jobtitle").value = jobId;
+    }
+    else{
+      //Sorry, this outlet is not yet supported :(
+    }
 
     // Load the saved background color for this page and modify the dropdown
     // value, if needed.
