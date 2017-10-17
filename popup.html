@@ -22,6 +22,14 @@
         display: flex;
         justify-content: space-between;
       }
+
+      #top {
+        background-color: #9501af;
+        min-height: 10px;
+        width: 100%;
+        clear: both;
+        float: left;
+      }
     </style>
 
     <!--
@@ -36,9 +44,10 @@
   <body>
     <h1>Save position</h1>
     <div id="container">
-      <span>Job Title</span>
-      <input type="text" id="jobtitle"/>
-      <button id="saveJob">Save</button>
+      <div id="top">Todo</div>
+      <div id="main">
+        <img id="loading-gif" src="img/loading.gif" />
+      </div>
     </div>
   </body>
 </html>

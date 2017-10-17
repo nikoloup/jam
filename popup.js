@@ -27,6 +27,7 @@ function getCurrentTabUrl(callback) {
     // A tab is a plain object that provides information about the tab.
     // See https://developer.chrome.com/extensions/tabs#type-Tab
     var url = tab.url;
+    var title = tab.title;
 
     // tab.url is only available if the "activeTab" permission is declared.
     // If you want to see the URL of other tabs (e.g. after removing active:true
@@ -34,7 +35,7 @@ function getCurrentTabUrl(callback) {
     // "url" properties.
     console.assert(typeof url == 'string', 'tab.url should be a string');
 
-    callback(url);
+    callback(url,title);
   });
 }
 
@@ -47,14 +48,22 @@ function getCurrentTabUrl(callback) {
 // chrome.storage.local allows the extension data to be synced across multiple
 // user devices.
 document.addEventListener('DOMContentLoaded', () => {
-  getCurrentTabUrl((url) => {
+  getCurrentTabUrl((url,title) => {
     //For now we assume it's a LinkedIn page
-    if(url.match(/www\.linkedin\.com)/g)!=null){
-      var jobId = url.match(/[0-9]+/g)[0];
-      document.getElementById("jobtitle").value = jobId;
+    if(url.match(/www\.linkedin\.com/g)!=null){
+      var jobInfo = {
+        "ID": url.match(/[0-9]+/g)[0],
+        "title": title.split('|')[0],
+        "company": title.split('|')[1];
+      }
+      var lgif = document.getElementById("loading-gif");
+      document.getElementById("main").removeChild(lgif);
+      document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
     }
     else{
-      document.getElementById("jobtitle").value = "Sorry, this service is not supported yet";
+      var lgif = document.getElementById("loading-gif");
+      document.getElementById("main").removeChild(lgif);
+      document.getElementById("main").innerHTML = "<p>Sorry, this service is not supported yet</p>";
     }
 
     // Load the saved background color for this page and modify the dropdown
