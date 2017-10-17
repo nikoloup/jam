@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("jobtitle").value = jobId;
     }
     else{
-      //Sorry, this outlet is not yet supported :(
+      document.getElementById("jobtitle").value = "Sorry, this service is not supported yet";
     }
 
     // Load the saved background color for this page and modify the dropdown
