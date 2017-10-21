@@ -36,6 +36,19 @@ function getCurrentTabUrl(callback) {
   });
 }
 
+function saveData(data,jobInfo){
+  //TODO: Check if job exists already
+  if(data.jobs==undefined){
+    data.jobs = [];
+  }
+  data.jobs.push(jobInfo);
+  chrome.storage.local.set(data, () => {
+    var lgif = document.getElementById("loading-gif");
+    document.getElementById("main").removeChild(lgif);
+    document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url,title) => {
     //For now we assume it's a LinkedIn page
@@ -43,11 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
       var jobInfo = {
         "ID": url.match(/[0-9]+/g)[0],
         "title": title.split('|')[0],
-        "company": title.split('|')[1];
+        "company": title.split('|')[1]
       }
-      var lgif = document.getElementById("loading-gif");
-      document.getElementById("main").removeChild(lgif);
-      document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
+      var data = chrome.storage.local.get(null, saveData);
     }
     else{
       var lgif = document.getElementById("loading-gif");
