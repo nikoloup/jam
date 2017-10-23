@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //For now we assume it's a LinkedIn page
     if(url.match(/www\.linkedin\.com/g)!=null){
       var jobInfo = {
-        "ID": url.match(/[0-9]+/g)[0],
+        "linkedin_ID": url.match(/[0-9]+/g)[0],
         "title": title.split('|')[0],
         "company": title.split('|')[1]
       }
