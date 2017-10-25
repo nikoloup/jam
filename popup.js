@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "company": title.split('|')[1]
       }
       var data = chrome.storage.local.get(null, (data) => {
-        //TODO: These should really be handled on install separately
+        //TODO: These should be now unnecessary - test to remove
         if(data.jobs==undefined){
           data.jobs = [];
         }
