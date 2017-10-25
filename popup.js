@@ -21,15 +21,6 @@ function getCurrentTabUrl(callback) {
   });
 }
 
-//Create Context Menu for main view
-chrome.contextMenus.create({
-      title: "first",
-      contexts: ["browser_action"],
-      onclick: function() {
-        alert('first');
-      }
-});
-
 //chrome.browserAction.onClicked.addListener(() => {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url,title) => {

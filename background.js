@@ -1,8 +1,8 @@
 chrome.contextMenus.removeAll();
 chrome.contextMenus.create({
-      title: "first",
+      title: "View jobs",
       contexts: ["browser_action"],
       onclick: function() {
-        alert('first');
+        chrome.tabs.create({ url: "main.html" });
       }
 });
