@@ -2,8 +2,30 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Century Gothic", Helvetica;
+}
+
 #top {
   background-color: #9501af;
   width: 300px;
   height: 20px;
+}
+
+#main {
+  margin: 10px 0px;
+}
+
+#message {
+  width: 100%;
+  text-align: center;
+}
+
+#message p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.fa-wrapper {
+  text-align: center;
 }
