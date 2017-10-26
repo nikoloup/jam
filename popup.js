@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
           data.id = 0;
         }
         data.id++;
-        jobsInfo.id = data.id;
+        jobInfo.id = data.id;
         data.jobs.push(jobInfo);
         chrome.storage.local.set(data, () => {
           //var lgif = document.getElementById("loading-gif");
