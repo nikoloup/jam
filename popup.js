@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.storage.local.set(data, () => {
           //var lgif = document.getElementById("loading-gif");
           //document.getElementById("main").removeChild(lgif);
-          document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
+          //document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
         });
       });
     }
     else{
       //var lgif = document.getElementById("loading-gif");
       //document.getElementById("main").removeChild(lgif);
-      document.getElementById("main").innerHTML = "<p>Sorry, this service is not supported yet</p>";
+      //document.getElementById("main").innerHTML = "<p>Sorry, this service is not supported yet</p>";
     }
   });
 });
