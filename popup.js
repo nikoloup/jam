@@ -21,6 +21,11 @@ function getCurrentTabUrl(callback) {
   });
 }
 
+function saveJob(){
+  //TODO: Fill in implementation
+  alert('I aint doing anythin yet');
+}
+
 //chrome.browserAction.onClicked.addListener(() => {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url,title) => {

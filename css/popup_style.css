@@ -7,7 +7,15 @@ body {
 }
 
 input {
-  margin: 10px 0px;
+  margin: 3px 0px 5px 0px;
+  width: 100%;
+  border: solid 1px #9501af;
+  border-radius: 3px;
+  padding: 5px 0px;
+}
+
+input[type=textarea] {
+  height: 150px;
 }
 
 #top {
@@ -23,6 +31,7 @@ input {
 #form {
   display: none;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 #warning{
@@ -31,7 +40,7 @@ input {
   border: inset 1px #bababa;
   text-align: justify;
   width: 100%;
-  background-color: #fff899;
+  background-color: #c1dbff;
   padding: 5px 10px;
   color: #666666;
   margin: 10px 0px;
@@ -47,6 +56,17 @@ input {
 #message p {
   font-size: 20px;
   font-weight: bold;
+}
+
+#submit{
+  position: relative;
+  float: right;
+  background-color: #9501af;
+  color: white;
+  padding: 10px 15px;
+  border: solid 1px black;
+  border-radius: 3px;
+  margin: 10px 0px;
 }
 
 div.fa-wrapper {
