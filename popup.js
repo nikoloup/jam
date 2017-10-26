@@ -24,7 +24,7 @@ function getCurrentTabUrl(callback) {
 //chrome.browserAction.onClicked.addListener(() => {
 document.addEventListener('DOMContentLoaded', () => {
   getCurrentTabUrl((url,title) => {
-    //For now we assume it's a LinkedIn page
+    //If it's a LinkedIn page (add other outlets later)
     if(url.match(/www\.linkedin\.com/g)!=null){
       var jobInfo = {
         "linkedin_ID": url.match(/[0-9]+/g)[0],
@@ -43,16 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
         jobInfo.id = data.id;
         data.jobs.push(jobInfo);
         chrome.storage.local.set(data, () => {
-          //var lgif = document.getElementById("loading-gif");
-          //document.getElementById("main").removeChild(lgif);
-          //document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
+          document.getElementById("message").style.display = 'block';
         });
       });
     }
     else{
-      //var lgif = document.getElementById("loading-gif");
-      //document.getElementById("main").removeChild(lgif);
-      //document.getElementById("main").innerHTML = "<p>Sorry, this service is not supported yet</p>";
+      document.getElementById("warning").style.display = 'block';
+      document.getElementById("form").style.display = 'block';
     }
   });
 });

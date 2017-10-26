@@ -10,8 +10,21 @@
   <body>
     <div id="container">
       <div id="top">&nbsp;</div>
+      <div id="warning">
+        <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;We're sorry, but this outlet is not supported yet. Please fill in
+          the job information using the form below.</p>
+      </div>
       <div id="main">
-        <div id="form"></div>
+        <div id="form">
+          <form>
+            <label>Job Title</label><br />
+            <input type="text" name="job_title"><br />
+            <label>Company Name</label><br />
+            <input type="text" name="company_name"><br />
+            <label>Role Description</label><br />
+            <input type="textarea" name="job_description"><br />
+          </form>
+        </div>
         <div id="message">
           <div class="fa-wrapper">
             <i class="fa fa-check fa-5x" aria-hidden="true"></i>

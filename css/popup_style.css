@@ -6,6 +6,10 @@ body {
   font-family: "Century Gothic", Helvetica;
 }
 
+input {
+  margin: 10px 0px;
+}
+
 #top {
   background-color: #9501af;
   width: 300px;
@@ -16,9 +20,28 @@ body {
   margin: 10px 0px;
 }
 
+#form {
+  display: none;
+  font-size: 16px;
+}
+
+#warning{
+  display: none;
+  border-radius: 5px;
+  border: inset 1px #bababa;
+  text-align: justify;
+  width: 100%;
+  background-color: #fff899;
+  padding: 5px 10px;
+  color: #666666;
+  margin: 10px 0px;
+  font-family: Helvetica;
+}
+
 #message {
   width: 100%;
   text-align: center;
+  display: none;
 }
 
 #message p {
