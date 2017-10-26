@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+#top {
+  background-color: #9501af;
+  width: 300px;
+  height: 20px;
+}

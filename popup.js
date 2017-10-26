@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         jobsInfo.id = data.id;
         data.jobs.push(jobInfo);
         chrome.storage.local.set(data, () => {
-          var lgif = document.getElementById("loading-gif");
-          document.getElementById("main").removeChild(lgif);
+          //var lgif = document.getElementById("loading-gif");
+          //document.getElementById("main").removeChild(lgif);
           document.getElementById("main").innerHTML = "<p>Job saved successfully!</p>";
         });
       });
     }
     else{
-      var lgif = document.getElementById("loading-gif");
-      document.getElementById("main").removeChild(lgif);
+      //var lgif = document.getElementById("loading-gif");
+      //document.getElementById("main").removeChild(lgif);
       document.getElementById("main").innerHTML = "<p>Sorry, this service is not supported yet</p>";
     }
   });

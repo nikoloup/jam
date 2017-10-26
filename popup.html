@@ -7,46 +7,16 @@
 <html>
   <head>
     <title>Job Save Dialog</title>
-    <style type="text/css">
-      body {
-        margin: 10px;
-        white-space: nowrap;
-      }
-
-      h1 {
-        font-size: 15px;
-      }
-
-      #container {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      #top {
-        background-color: #9501af;
-        min-height: 10px;
-        width: 100%;
-        clear: both;
-        float: left;
-      }
-    </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-    -->
+    <link href="./css/popup_style.css" type="text/css" rel="stylesheet">
     <script src="popup.js"></script>
   </head>
 
   <body>
-    <h1>Save position</h1>
     <div id="container">
-      <div id="top">Todo</div>
+      <div id="top">&nbsp;</div>
       <div id="main">
-        <img id="loading-gif" src="img/loading.gif" />
+        <div id="form"></div>
+        <div id="message"></div>
       </div>
     </div>
   </body>
