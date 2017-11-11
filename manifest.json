@@ -16,13 +16,13 @@
     "contextMenus"
   ],
   "background" : {
-    "scripts" : ["js/background.js"]
+    "scripts" : ["src/background.js"]
   },
   "content_scripts": [
       {
         "matches": ["http://www.linkedin.com/*","https://www.linkedin.com/*"],
         "css": [],
-        "js": ["js/content_linkedin.js"]
+        "js": ["src/content_linkedin.js"]
       }
   ]
 }
