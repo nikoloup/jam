@@ -1,0 +1,24 @@
+{
+  "name": "jam",
+  "version": "0.1.0",
+  "description": "<h1>Jam</h1>",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikoloup/jam.git"
+  },
+  "author": "Panagiotis Nikoloutsopoulos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikoloup/jam/issues"
+  },
+  "homepage": "https://github.com/nikoloup/jam#readme",
+  "dependencies": {
+    "install": "^0.10.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  }
+}
