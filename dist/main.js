@@ -18258,9 +18258,9 @@ class Grid extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 
 
-class GridItem extends React.Component {
+class GridItem extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
-    return React.createElement(
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'p',
       null,
       'GridItem'
