@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 export class GridItem extends React.Component{
   render(){
