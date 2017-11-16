@@ -37,13 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         "company": title.split('|')[1]
       }
       var data = chrome.storage.local.get(null, (data) => {
-        //TODO: These should be now unnecessary - test to remove
-        if(data.jobs==undefined){
-          data.jobs = [];
-        }
-        if(data.id==undefined){
-          data.id = 0;
-        }
         data.id++;
         jobInfo.id = data.id;
         data.jobs.push(jobInfo);
